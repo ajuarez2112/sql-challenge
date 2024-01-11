@@ -12,13 +12,13 @@ WHERE EXTRACT(YEAR FROM hire_date) = 1986;
 SELECT departments.dept_no, dept_name, employees.emp_no, last_name, first_name
 FROM departments, dept_manager, employees
 WHERE departments.dept_no = dept_manager.dept_no
-AND employees.emp_no = dept_manager.emp_no
+AND employees.emp_no = dept_manager.emp_no;
 
 -- List dept number for each employee along with their employee number, last name, first name, and department name
 SELECT departments.dept_no, employees.emp_no, last_name, first_name, dept_name
 FROM departments, employees, dept_emp
 WHERE departments.dept_no = dept_emp.dept_no
-AND employees.emp_no = dept_emp.emp_no
+AND employees.emp_no = dept_emp.emp_no;
 
 -- List the first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter "B"
 SELECT first_name, last_name, sex
